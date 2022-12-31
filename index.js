@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 // Set statix folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+/* This is a route that is being used to call the openaiRoutes.js file. */
 app.use('/openai', require('./routes/openaiRoutes'));
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
